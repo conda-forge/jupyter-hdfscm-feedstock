@@ -1,5 +1,5 @@
 {% set name = "jupyter-hdfscm" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41ec68a4d44b88bc47b0122044a6c28bee8059fd0de93c26e27e2f1a65ba968d
+  sha256: c719ea23e4d2a9d516b1cd1516e39905c61935aa205b88366d0aeb80ed7caac6
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win or osx or py<35]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
